@@ -24,7 +24,22 @@ public class main {
 			}
 		}
 		System.out.println(resultado);
-		
+		//parte2
+		int resultadoDos = 0;
+		int posicion=0;
+		for(int i=0;i<datos.length();i++) {
+			char simboloDos = datos.charAt(i);
+			if(simboloDos == '(') {
+				resultadoDos++;
+			}else{
+				resultadoDos--;
+			}
+			if(resultadoDos < 0) {
+				posicion = i + 1;
+				break;
+			}
+		}
+		System.out.println(posicion);
 	}
 
 }
